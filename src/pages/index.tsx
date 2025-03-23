@@ -2,7 +2,7 @@ import { Lora } from "next/font/google";
 import Header from "../components/Header";
 import ScrollIndicator from "../components/ScrollIndicator";
 import AnimatedIntro from "../components/AnimatedIntro";
-import { PhotoData, ProjectData, Skill } from "./types";
+import { PhotoData, ProjectData, Skill } from "../components/types";
 import TechStack from "../components/TechStack";
 import ProjectCard from "../components/ProjectCard";
 import ExperienceCard from "../components/ExperienceCard";
