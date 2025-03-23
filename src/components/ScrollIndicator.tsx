@@ -25,7 +25,7 @@ const ScrollIndicator = () => {
 
   return (
     <div
-      className={`fixed bottom-16 sm:bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity duration-500 ${
+      className={`fixed bottom-24 sm:bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity duration-500 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >

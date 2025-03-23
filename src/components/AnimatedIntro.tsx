@@ -13,7 +13,7 @@ const AnimatedIntro = () => {
               src="/images/joshua-headshot-3.jpg"
               width={240}
               height={240}
-              className="rounded-full"
+              className="rounded-full w-48 h-48 sm:w-60 sm:h-60 md:w-auto md:h-auto"
               alt="Joshua"
             />
           </div>
