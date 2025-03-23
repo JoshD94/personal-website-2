@@ -1,13 +1,13 @@
 import { Lora } from "next/font/google";
-import Header from "./components/Header";
-import ScrollIndicator from "./components/ScrollIndicator";
-import AnimatedIntro from "./components/AnimatedIntro";
+import Header from "../components/Header";
+import ScrollIndicator from "../components/ScrollIndicator";
+import AnimatedIntro from "../components/AnimatedIntro";
 import { PhotoData, ProjectData, Skill } from "./types";
-import TechStack from "./components/TechStack";
-import ProjectCard from "./components/ProjectCard";
-import ExperienceCard from "./components/ExperienceCard";
-import HobbyCarousel from "./components/HobbyCarousel";
-import Tooltip from "./components/Tooltip";
+import TechStack from "../components/TechStack";
+import ProjectCard from "../components/ProjectCard";
+import ExperienceCard from "../components/ExperienceCard";
+import HobbyCarousel from "../components/HobbyCarousel";
+import Tooltip from "../components/Tooltip";
 
 const lora = Lora({
   subsets: ["latin"],
