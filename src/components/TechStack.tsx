@@ -9,7 +9,7 @@ interface SkillDetailProps {
 const SkillDetail: React.FC<SkillDetailProps> = ({ skill }) => {
   if (!skill) {
     return (
-      <div className="h-[250px] sm:h-[210px] flex items-center justify-center text-gray-400 dark:text-gray-500">
+      <div className="h-[180px] sm:h-[210px] flex items-center justify-center text-gray-400 dark:text-gray-500">
         <span className="sm:hidden">Tap on a skill to see details</span>
         <span className="hidden sm:block">Hover over a skill to see details</span>
       </div>
@@ -29,49 +29,91 @@ const SkillDetail: React.FC<SkillDetailProps> = ({ skill }) => {
   else if (level === "Advanced") levelColor = "bg-purple-500";
   else if (level === "Expert") levelColor = "bg-red-500";
 
-  return (
-    <div className="h-[250px] sm:h-[210px] py-4 px-4 sm:py-6 sm:px-6 flex flex-col sm:flex-row items-center overflow-hidden">
-      {/* Icon and Name - Stacked on mobile, side by side on desktop */}
-      <div className="mb-4 sm:mb-0 sm:mr-8 flex-shrink-0 flex flex-col items-center justify-center w-20 sm:w-24">
-        <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-full mb-2 shadow-md w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-          <i className={`${skill.iconClass} colored text-4xl sm:text-5xl drop-shadow-md`} style={{ fontSize: "2rem" }} />
+  // Mobile version (simplified without icon)
+  const mobileVersion = (
+    <div className="h-60 py-3 px-3 flex flex-col overflow-hidden">
+      <h3 className="text-base font-semibold mb-2">{skill.name}</h3>
+      
+      {/* Experience Level Bar */}
+      <div className="mb-3">
+        <div className="flex items-center justify-between mb-1">
+          <span className="text-xs font-medium text-gray-600 dark:text-gray-300">Experience Level:</span>
+          <span className="font-medium text-xs px-1.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 dark:text-gray-300">{level}</span>
         </div>
-        <h3 className="text-lg sm:text-xl font-semibold text-center">{skill.name}</h3>
+        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+          <div 
+            className={`${levelColor} h-2 rounded-full transition-all duration-500`} 
+            style={{ width: `${levelPercentage}%` }}
+          />
+        </div>
+      </div>
+      
+      {/* Experience and Projects - Full width for better readability */}
+      <div>
+        <h4 className="text-xs font-bold text-gray-600 dark:text-gray-300 mb-0.5">Experience:</h4>
+        <p className="text-xs text-gray-700 dark:text-gray-300 leading-tight h-12 overflow-y-auto pr-1">
+          {description}
+        </p>
+        <h4 className="text-xs font-bold text-gray-600 dark:text-gray-300 mb-0.5 mt-2">Projects:</h4>
+        <p className="text-xs text-gray-700 dark:text-gray-300 leading-tight h-12 overflow-y-auto pr-1">
+          {skill.projects ? skill.projects.join(", ") : "No projects listed for this skill."}
+        </p>
+      </div>
+    </div>
+  );
+
+  // Desktop version (with icon)
+  const desktopVersion = (
+    <div className="h-[210px] py-6 px-6 flex flex-row items-center overflow-hidden">
+      {/* Icon and Name */}
+      <div className="mb-0 mr-8 flex-shrink-0 flex flex-col items-center justify-center w-24">
+        <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-full mb-2 shadow-md w-20 h-20 flex items-center justify-center">
+          <i className={`${skill.iconClass} colored text-5xl drop-shadow-md`} style={{ fontSize: "2rem" }} />
+        </div>
+        <h3 className="text-xl font-semibold text-center">{skill.name}</h3>
       </div>
       
       {/* Skill Details */}
-      <div className="flex-1 w-full sm:w-auto overflow-hidden">
-        {/* Experience Level Bar - Now at the top */}
+      <div className="flex-1 w-auto overflow-hidden">
+        {/* Experience Level Bar */}
         <div className="mb-4">
           <div className="flex items-center justify-between mb-1">
-            <span className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-300">Experience Level:</span>
-            <span className="font-medium text-xs sm:text-sm px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-700 dark:text-gray-300">{level}</span>
+            <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Experience Level:</span>
+            <span className="font-medium text-sm px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-700 dark:text-gray-300">{level}</span>
           </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 sm:h-3">
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
             <div 
-              className={`${levelColor} h-2 sm:h-3 rounded-full transition-all duration-500 relative`} 
+              className={`${levelColor} h-3 rounded-full transition-all duration-500 relative`} 
               style={{ width: `${levelPercentage}%` }}
             >
-              <span className="absolute right-0 bottom-0 transform translate-x-1/2 translate-y-full text-xs font-medium bg-gray-800 text-white px-1 py-0.5 rounded hidden sm:inline-block">
+              <span className="absolute right-0 bottom-0 transform translate-x-1/2 translate-y-full text-xs font-medium bg-gray-800 text-white px-1 py-0.5 rounded inline-block">
                 {levelPercentage}%
               </span>
             </div>
           </div>
         </div>
         
-        {/* Experience and Projects - Below the bar */}
+        {/* Experience and Projects */}
         <div>
-          <h4 className="text-xs sm:text-sm font-bold text-gray-600 dark:text-gray-300 mb-1">Experience:</h4>
-          <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed h-14 sm:h-10 overflow-y-auto pr-1">
+          <h4 className="text-sm font-bold text-gray-600 dark:text-gray-300 mb-1">Experience:</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed h-10 overflow-y-auto pr-1">
             {description}
           </p>
-          <h4 className="text-xs sm:text-sm font-bold text-gray-600 dark:text-gray-300 mb-1 mt-2">Projects:</h4>
-          <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed h-14 sm:h-10 overflow-y-auto pr-1">
+          <h4 className="text-sm font-bold text-gray-600 dark:text-gray-300 mb-1 mt-2">Projects:</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed h-10 overflow-y-auto pr-1">
             {skill.projects ? skill.projects.join(", ") : "No projects listed for this skill."}
           </p>
         </div>
       </div>
     </div>
+  );
+
+  // Return different layouts based on screen size
+  return (
+    <>
+      <div className="sm:hidden">{mobileVersion}</div>
+      <div className="hidden sm:block">{desktopVersion}</div>
+    </>
   );
 };
 
@@ -315,62 +357,99 @@ const TechStack: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto">
       {/* Skill Detail Area */}
-      <div className="border rounded-lg bg-card-bg shadow-md transition-all h-[250px] sm:h-[210px] mb-8 overflow-hidden">
+      <div className="border rounded-lg bg-card-bg shadow-md transition-all h-[220px] sm:h-[210px] mb-6 sm:mb-8 overflow-hidden">
         <SkillDetail skill={hoveredSkill} />
       </div>
 
-      {/* Skill Categories in Columns */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        {Object.entries(skills).map(([category, skillsList]) => (
-          <div key={category} className="space-y-3">
-            <h3 className="text-lg font-medium text-gray-700 dark:text-gray-300 border-b pb-2">
-              {category}
-            </h3>
-            <div className="flex flex-wrap gap-2 justify-left items-center">
-              {skillsList.map((skill, index) => (
-                <div 
-                  key={`${skill.name}-${index}`}
-                  className="relative group mb-2"
-                  onMouseEnter={() => setHoveredSkill(skill)}
-                  onClick={() => setHoveredSkill(skill)} // For mobile touch
-                >
-                  <div className={`
-                    w-12 h-12 
-                    sm:w-14 sm:h-14 
-                    bg-card-bg 
-                    rounded-lg 
-                    shadow-md 
-                    p-2 
-                    flex 
-                    items-center 
-                    justify-center 
-                    transition-all 
-                    duration-200 
-                    hover:shadow-lg 
-                    hover:scale-110
-                    ${hoveredSkill?.name === skill.name ? 'ring-2 ring-blue-500 scale-110 shadow-lg' : ''}
-                  `}>
-                    <i 
-                      className={`${skill.iconClass} colored drop-shadow-md`}
-                      style={{ fontSize: "1.25rem" }}
-                      aria-label={skill.name}
-                    />
-                  </div>
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-10">
+      {/* Mobile Version - List with dropdowns for each category */}
+      <div className="sm:hidden">
+        <div className="space-y-4">
+          {Object.entries(skills).map(([category, skillsList]) => (
+            <div key={category} className="space-y-2">
+              <h3 className="text-base font-medium text-gray-700 dark:text-gray-300 border-b pb-1">
+                {category}
+              </h3>
+              <div className="grid grid-cols-3 gap-1">
+                {skillsList.map((skill, index) => (
+                  <button 
+                    key={`${skill.name}-${index}`}
+                    className={`
+                      text-xs
+                      py-1.5
+                      px-2
+                      bg-card-bg 
+                      rounded 
+                      shadow-sm 
+                      text-center
+                      transition-all 
+                      duration-200 
+                      border
+                      ${hoveredSkill?.name === skill.name 
+                        ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20' 
+                        : 'border-gray-200 dark:border-gray-700'}
+                    `}
+                    onClick={() => setHoveredSkill(skill)}
+                  >
                     {skill.name}
-                  </div>
-                </div>
-              ))}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="text-center text-xs text-gray-500 dark:text-gray-400 mt-4">
+          Tap on a skill to see details
+        </div>
       </div>
-      
-      <div className="text-center text-xs text-gray-500 dark:text-gray-400 mt-4 sm:hidden">
-        Tap on an icon to see details
-      </div>
-      <div className="text-center text-xs text-gray-500 dark:text-gray-400 mt-4 hidden sm:block">
-        Hover over an icon to see details
+
+      {/* Desktop Version - Icons */}
+      <div className="hidden sm:block">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-4">
+          {Object.entries(skills).map(([category, skillsList]) => (
+            <div key={category} className="space-y-3">
+              <h3 className="text-lg font-medium text-gray-700 dark:text-gray-300 border-b pb-2">
+                {category}
+              </h3>
+              <div className="flex flex-wrap gap-2 justify-left items-center">
+                {skillsList.map((skill, index) => (
+                  <div 
+                    key={`${skill.name}-${index}`}
+                    className="relative group mb-2"
+                    onMouseEnter={() => setHoveredSkill(skill)}
+                  >
+                    <div className={`
+                      w-14 h-14 
+                      bg-card-bg 
+                      rounded-lg 
+                      shadow-md 
+                      p-2 
+                      flex 
+                      items-center 
+                      justify-center 
+                      transition-all 
+                      duration-200 
+                      hover:shadow-lg 
+                      hover:scale-110
+                      ${hoveredSkill?.name === skill.name ? 'ring-2 ring-blue-500 scale-110 shadow-lg' : ''}
+                    `}>
+                      <i 
+                        className={`${skill.iconClass} colored drop-shadow-md`}
+                        style={{ fontSize: "1.25rem" }}
+                        aria-label={skill.name}
+                      />
+                    </div>
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-10">
+                      {skill.name}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="text-center text-xs text-gray-500 dark:text-gray-400 mt-4">
+          Hover over an icon to see details
+        </div>
       </div>
     </div>
   );

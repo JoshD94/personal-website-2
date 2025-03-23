@@ -25,12 +25,12 @@ const ScrollIndicator = () => {
 
   return (
     <div
-      className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity duration-500 ${
+      className={`fixed bottom-16 sm:bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity duration-500 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
       <div className="flex flex-col items-center space-y-2">
-        <span className="text-lg text-gray-500">Discover More</span>
+        <span className="text-sm sm:text-lg text-gray-500">Discover More</span>
         <div className="flex space-x-1">
           <div className="w-1 h-1 rounded-full bg-gray-400 animate-bounce delay-0"></div>
           <div className="w-1 h-1 rounded-full bg-gray-400 animate-bounce delay-150"></div>

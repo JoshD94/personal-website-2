@@ -5,7 +5,7 @@ import Tooltip from "./Tooltip";
 
 const AnimatedIntro = () => {
   return (
-    <div className="h-screen flex items-center justify-start p-8">
+    <div className="min-h-screen py-16 sm:py-0 sm:h-screen flex items-center justify-start p-8">
       <div className="w-full max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           <div className="flex justify-center md:justify-end">
@@ -20,7 +20,7 @@ const AnimatedIntro = () => {
           <div className="space-y-6 text-center md:text-left col-span-2">
             <div>
               <p className="text-4xl font-semibold">Hi, I'm Joshua.</p>
-              <p className="text-2xl font-semibold mt-4">
+              <p className="text-xl sm:text-2xl font-semibold mt-4">
                 From{" "}
                 <span className="animate-gradient-2 bg-gradient-to-r from-amber-800 via-yellow-600 to-amber-800 bg-clip-text text-transparent bg-300% transition-all duration-400">
                   deepfake detection
@@ -31,7 +31,7 @@ const AnimatedIntro = () => {
                 </span>{" "}
                 — Crafting technology with purpose at Cornell and beyond.
               </p>
-              <p className="text-xl mt-2">
+              <p className="text-lg sm:text-xl mt-2">
                 Indonesian-born developer who brings a{" "}
                 <span className="animate-gradient-3 bg-gradient-to-r from-yellow-500 via-red-600 to-yellow-500 bg-clip-text text-transparent bg-300% transition-all duration-400">
                   global perspective
@@ -39,7 +39,7 @@ const AnimatedIntro = () => {
                 to code.
               </p>
             </div>
-            <div className="flex space-x-4 justify-center md:justify-start">
+            <div className="flex space-x-4 justify-center md:justify-start mt-8">
               <Tooltip text="GitHub Profile">
                 <a
                   href="https://github.com/JoshD94"

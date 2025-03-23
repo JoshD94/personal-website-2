@@ -68,11 +68,11 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 bg-header-bg z-50 transition-all duration-300 ${scrolled ? 'shadow-md' : 'shadow-sm'}`}>
-      <nav className="max-w-7xl mx-auto px-4">
-        <div className="h-16 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-3 sm:px-4">
+        <div className="h-14 sm:h-16 flex items-center justify-between">
           <span
             onClick={scrollToTop}
-            className="text-xl font-semibold cursor-pointer transition-colors text-foreground"
+            className="text-lg sm:text-xl font-semibold cursor-pointer transition-colors text-foreground truncate"
           >
             Joshua Dirga
           </span>
@@ -111,13 +111,13 @@ const Header = () => {
             {/* Theme Toggle Button for Small Devices */}
             <button
               onClick={toggleTheme}
-              className="p-2 mr-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none"
+              className="p-1.5 sm:p-2 mr-1 sm:mr-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none"
               aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {theme === 'dark' ? (
-                <Sun size={20} className="text-foreground" />
+                <Sun size={18} className="text-foreground" />
               ) : (
-                <Moon size={20} className="text-foreground" />
+                <Moon size={18} className="text-foreground" />
               )}
             </button>
             
@@ -127,15 +127,15 @@ const Header = () => {
               className="text-foreground hover:opacity-80 focus:outline-none"
               aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-card-bg shadow-md z-50">
-            <div className="flex flex-col py-2">
+          <div className="md:hidden absolute top-14 sm:top-16 left-0 right-0 bg-card-bg shadow-md z-50">
+            <div className="flex flex-col py-1 sm:py-2">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -143,7 +143,7 @@ const Header = () => {
                   onClick={(e) => handleScroll(e, item.href, item.isExternal)}
                   target={item.isExternal ? "_blank" : undefined}
                   rel={item.isExternal ? "noopener noreferrer" : undefined}
-                  className="px-4 py-3 text-foreground hover:opacity-80 hover:bg-gray-50 dark:hover:bg-gray-800 text-base font-medium transition-colors cursor-pointer"
+                  className="px-4 py-2.5 sm:py-3 text-foreground hover:opacity-80 hover:bg-gray-50 dark:hover:bg-gray-800 text-sm sm:text-base font-medium transition-colors cursor-pointer"
                 >
                   {item.name}
                 </a>

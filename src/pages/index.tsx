@@ -156,10 +156,10 @@ export default function Home() {
 
       <div
         id="about"
-        className="max-w-6xl mx-auto px-8 pb-16 space-y-12 scroll-mt-16"
+        className="max-w-6xl mx-auto px-4 sm:px-8 pb-16 space-y-8 sm:space-y-12 scroll-mt-20 sm:scroll-mt-16"
       >
-        <section id="experience" className="space-y-6 scroll-mt-16">
-          <h2 className="text-3xl border-b-2 pb-2 text-foreground">Professional Experience</h2>
+        <section id="experience" className="space-y-6 scroll-mt-20 sm:scroll-mt-16">
+          <h2 className="text-2xl sm:text-3xl border-b-2 pb-2 text-foreground">Professional Experience</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
@@ -224,9 +224,9 @@ export default function Home() {
         </section>
         
         {/* Projects - no margin between sections */}
-        <section id="projects" className="scroll-mt-16">
-          <h2 className="text-3xl border-b-2 pb-2 text-foreground">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+        <section id="projects" className="scroll-mt-20 sm:scroll-mt-16">
+          <h2 className="text-2xl sm:text-3xl border-b-2 pb-2 text-foreground">Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-4 sm:mt-6">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
@@ -234,13 +234,13 @@ export default function Home() {
         </section>
 
         {/* Technical Skills */}
-        <section id="skills" className="space-y-4 scroll-mt-16">
-          <h2 className="text-3xl border-b-2 pb-2 text-foreground">Technical Skills</h2>
+        <section id="skills" className="space-y-4 scroll-mt-20 sm:scroll-mt-16">
+          <h2 className="text-2xl sm:text-3xl border-b-2 pb-2 text-foreground">Technical Skills</h2>
           <TechStack />
         </section>
         
-        <section id="activities" className="space-y-6 scroll-mt-16">
-          <h2 className="text-3xl border-b-2 pb-2 text-foreground">Activities & Leadership</h2>
+        <section id="activities" className="space-y-6 scroll-mt-20 sm:scroll-mt-16">
+          <h2 className="text-2xl sm:text-3xl border-b-2 pb-2 text-foreground">Activities & Leadership</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Indonesian Association */}
@@ -287,8 +287,8 @@ export default function Home() {
         </section>
 
         {/* Awards */}
-        <section id="awards" className="space-y-4 scroll-mt-16">
-          <h2 className="text-3xl border-b-2 pb-2 text-foreground">Awards and Certificates</h2>
+        <section id="awards" className="space-y-4 scroll-mt-20 sm:scroll-mt-16">
+          <h2 className="text-2xl sm:text-3xl border-b-2 pb-2 text-foreground">Awards and Certificates</h2>
           <ul className="list-disc list-inside text-foreground">
             <li>First Place, RCareWorld Hackathon 2024</li>
             <li>Second Place, Big Red Hacks Hackathon 2024</li>
@@ -297,8 +297,8 @@ export default function Home() {
         </section>
 
         {/* Education */}
-        <section className="space-y-4">
-          <h2 className="text-3xl border-b-2 pb-2 text-foreground">Education</h2>
+        <section className="space-y-4 scroll-mt-20 sm:scroll-mt-16">
+          <h2 className="text-2xl sm:text-3xl border-b-2 pb-2 text-foreground">Education</h2>
           <div>
             <div className="flex justify-between items-baseline">
               <h3 className="text-xl text-foreground">Cornell University (Ithaca NY, USA)</h3>
@@ -306,7 +306,7 @@ export default function Home() {
             </div>
             <p className="text-gray-700 dark:text-gray-300">College of Engineering, Computer Science (GPA 3.8/4.3)</p>
             <p className="text-gray-700 dark:text-gray-300">
-              CS 2110 OOP & Data Structures | CS 2800 Discrete Math | MATH 2940 Linear Algebra | CS 3110 Functional Programming | CS 4820 Analysis of Algorithms | CS 3410 Computer Systems
+              CS 2110 OOP & Data Structures | CS 2800 Discrete Math | MATH 2940 Linear Algebra | CS 3110 Functional Programming | CS 4820 Analysis of Algorithms | CS 3410 Computer Systems | CS 3700 Foundations of AI Reasoning and Decision-making
             </p>
           </div>
         </section>
