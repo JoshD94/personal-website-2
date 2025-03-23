@@ -7,8 +7,8 @@ const AnimatedIntro = () => {
   return (
     <div className="min-h-screen py-16 sm:py-0 sm:h-screen flex items-center justify-start p-8">
       <div className="w-full max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          <div className="flex justify-center md:justify-end">
+        <div className="flex flex-col items-center md:grid md:grid-cols-3 md:gap-8 md:items-center">
+          <div className="w-full flex justify-center md:col-span-1 md:justify-end mb-6 md:mb-0">
             <Image
               src="/images/joshua-headshot-3.jpg"
               width={240}
@@ -17,7 +17,7 @@ const AnimatedIntro = () => {
               alt="Joshua"
             />
           </div>
-          <div className="space-y-6 text-center md:text-left col-span-2">
+          <div className="space-y-6 text-center md:text-left md:col-span-2 w-full">
             <div>
               <p className="text-4xl font-semibold">Hi, I'm Joshua.</p>
               <p className="text-xl sm:text-2xl font-semibold mt-4">
@@ -51,7 +51,7 @@ const AnimatedIntro = () => {
                 </a>
               </Tooltip>
               <Tooltip text="LinkedIn Profile">
-                <a
+              <a
                   href="https://www.linkedin.com/in/joshua-dirga-49a929215/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -61,7 +61,7 @@ const AnimatedIntro = () => {
                 </a>
               </Tooltip>
               <Tooltip text="Send Email">
-                <a
+              <a
                   href="mailto:joshdirga@gmail.com"
                   target="_blank"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
@@ -70,7 +70,7 @@ const AnimatedIntro = () => {
                 </a>
               </Tooltip>
               <Tooltip text="Download Resume">
-                <a
+              <a
                   href="https://drive.google.com/file/d/1kmCDxLorwSFpaZdFwrv-PmkSRMAXD9MU/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
