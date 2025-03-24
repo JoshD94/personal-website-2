@@ -304,7 +304,7 @@ export default function Home() {
               <h3 className="text-xl text-foreground">Cornell University (Ithaca NY, USA)</h3>
               <p className="text-gray-600 dark:text-gray-300">Graduating Spring 2027</p>
             </div>
-            <p className="text-gray-700 dark:text-gray-300">College of Engineering, Computer Science (GPA 3.8/4.3)</p>
+            <p className="text-gray-700 dark:text-gray-300">College of Engineering, Computer Science (GPA 3.8)</p>
             <p className="text-gray-700 dark:text-gray-300">
               CS 2110 OOP & Data Structures | CS 2800 Discrete Math | MATH 2940 Linear Algebra | CS 3110 Functional Programming | CS 4820 Analysis of Algorithms | CS 3410 Computer Systems | CS 3700 Foundations of AI Reasoning and Decision-making
             </p>
