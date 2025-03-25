@@ -290,8 +290,21 @@ export default function Home() {
         <section id="awards" className="space-y-4 scroll-mt-20 sm:scroll-mt-16">
           <h2 className="text-2xl sm:text-3xl border-b-2 pb-2 text-foreground">Awards and Certificates</h2>
           <ul className="list-disc list-inside text-foreground">
-            <li>First Place, RCareWorld Hackathon 2024</li>
-            <li>Second Place, Big Red Hacks Hackathon 2024</li>
+            <li>First Place, RCareWorld Hackathon 2024 <a target="_blank" href="https://www.cornellassist.com/post/rcareworld-hackathon-2024-innovating-the-future-of-caregiving-at-cornell" className="text-blue-600">
+            Article
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 inline">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            </a></li>
+            <li>Second Place, Big Red Hacks Hackathon 2024 <a target="_blank" href="https://devpost.com/software/nocturne-uytmso" className="text-blue-600">DevPosts
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 inline">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            </a></li>
             <li>Valedictorian, Sinarmas World Academy - 2023</li>
           </ul>
         </section>
