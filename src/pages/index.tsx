@@ -144,7 +144,35 @@ const projects: ProjectData[] = [
     ],
     imageSrc: "/images/dinojim-1.jpg",
     link: "https://github.com/JoshD94/Dino-Jim"
-  }
+  },
+  {
+    title: "Sitara Tennis Booking App",
+    description: "A tennis booking app for Sitara Tennis Club, featuring court reservations with weekly quotas.",
+    techStack: [
+      { name: "React", iconClass: "devicon-react-plain" },
+      { name: "TypeScript", iconClass: "devicon-typescript-plain" },
+      { name: "PostgreSQL", iconClass: "devicon-postgresql-plain" },
+      { name: "Prisma", iconClass: "devicon-nodejs-plain" },
+      { name: "Vercel", iconClass: "devicon-vercel-plain" },
+      { name: "Next.js", iconClass: "devicon-nextjs-plain" }
+    ],
+    imageSrc: "/images/sitaratennis-1.jpg",
+    link: "https://sitaratennis.vercel.app"
+  },
+  {
+    title: "Triviargh",
+    description: "A quiz app. Users can create and play quizzes, and compete with friends. Built with React, Next.js, and PostgreSQL.",
+    techStack: [
+      { name: "React", iconClass: "devicon-react-plain" },
+      { name: "TypeScript", iconClass: "devicon-typescript-plain" },
+      { name: "PostgreSQL", iconClass: "devicon-postgresql-plain" },
+      { name: "Prisma", iconClass: "devicon-nodejs-plain" },
+      { name: "Vercel", iconClass: "devicon-vercel-plain" },
+      { name: "Next.js", iconClass: "devicon-nextjs-plain" }
+    ],
+    imageSrc: "/images/triviargh-1.jpg",
+    link: "https://triviargh.vercel.app"
+  },
 ];
 
 export default function Home() {
