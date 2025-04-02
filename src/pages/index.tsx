@@ -45,6 +45,10 @@ const ccraPhotos: PhotoData[] = [
   { src: "/images/ccra-1.jpg", caption: "CCRA meeting!" },
 ];
 
+const coursePhotos: PhotoData[] = [
+  { src: "/images/course-1.jpg", caption: "Co-teaching Intro to Backend Course!" },
+];
+
 const projects: ProjectData[] = [
   {
     title: "Uplift",
@@ -299,6 +303,20 @@ export default function Home() {
               images={ccraPhotos}
             />
 
+            {/* Backend course */}
+            <ExperienceCard
+              title="Course Instructor"
+              company="Cornell Appdev"
+              location="New York"
+              period="2025"
+              bulletPoints={[
+                'Taught <a href="#" class="text-blue-600 hover:text-blue-800">60 students</a> as course instructor, giving lectures and live demos on backend development and deployment',
+                'Organized 10 TA office hours, managed grading, course logistics',
+                'Designed <a href="#" class="text-blue-600 hover:text-blue-800">7-week curriculum with a cross-functional hackathon</a> in collaboration with iOS, Android, and design courses'
+              ]}
+              images={coursePhotos}
+            />
+
             {/* TEDx */}
             <ExperienceCard
               title="Speaker and Organizer"
@@ -311,6 +329,8 @@ export default function Home() {
               ]}
               images={tedxPhotos}
             />
+
+            
           </div>
         </section>
 
