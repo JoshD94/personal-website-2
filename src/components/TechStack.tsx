@@ -308,8 +308,35 @@ const TechStack: React.FC = () => {
         description: "Primary database for production applications. Designed schemas, wrote complex queries, and deployed databases for multiple projects.",
         projects: ["CRM Web App", "Uplift"]
       },
-      { name: "MySQL", iconClass: "devicon-mysql-plain", level: "Beginner", levelPercentage: 40, description: "Used MySQL for data storage in various projects. Experienced with basic queries and database design.", projects: ["SWA UniApp"] },
-      { name: "SQLite", iconClass: "devicon-sqlite-plain", level: "Intermediate", levelPercentage: 60, description: "Used SQLite for lightweight database solutions in mobile and web applications.", projects: ["Vividly", "Nocturne", "Uplift", "CRM Web App", "Cornell Vending"] },    ],
+      { name: "MySQL",
+        iconClass: "devicon-mysql-plain",
+        level: "Beginner",
+        levelPercentage: 40,
+        description: "Used MySQL for data storage in various projects. Experienced with basic queries and database design.",
+        projects: ["SWA UniApp"]
+      },
+      { name: "SQLite",
+        iconClass: "devicon-sqlite-plain",
+        level: "Intermediate",
+        levelPercentage: 60,
+        description: "Used SQLite for lightweight database solutions in mobile and web applications.",
+        projects: ["Vividly", "Nocturne", "Uplift", "CRM Web App", "Cornell Vending"]
+      },
+      { name: "MongoDB",
+        iconClass: "devicon-mongodb-plain",
+        level: "Beginner",
+        levelPercentage: 40,
+        description: "Used MongoDB for NoSQL database solutions in web applications. Experienced with basic CRUD operations and schema design.",
+        projects: ["ChitChat"]
+      },
+      { name: "Mongoose",
+        iconClass: "devicon-mongoose-original",
+        level: "Beginner",
+        levelPercentage: 40,
+        description: "Used Mongoose for MongoDB object modeling in Node.js applications. Implemented schemas and validation.",
+        projects: ["Chitchat"]
+      },
+    ],
     "Cloud & DevOps": [
       { name: "AWS Amplify", iconClass: "devicon-amazonwebservices-plain", level: "Beginner", levelPercentage: 30, description: "Used AWS Amplify for deploying and hosting static applications.", projects: ["BRB Counter"] },
       { name: "AWS Route 53", iconClass: "devicon-amazonwebservices-plain", level: "Beginner", levelPercentage: 30, description: "Used AWS Route 53 for domain management and DNS routing.", projects: ["BRB Counter"] },
@@ -328,6 +355,14 @@ const TechStack: React.FC = () => {
       { name: "GitHub", iconClass: "devicon-github-original", level: "Advanced", levelPercentage: 90, description: "Version control for all projects. Experienced with branching strategies, pull requests, code reviews, and complex merges.",
         projects: ["All projects"]
        },
+       { 
+        name: "MongoDB Atlas",
+        iconClass: "devicon-mongodb-plain",
+        level: "Beginner",
+        levelPercentage: 40,
+        description: "Used MongoDB Atlas for cloud-based NoSQL database solutions. Experienced with data modeling and querying.",
+        projects: ["ChitChat"] 
+      },
     ],
     Tools: [
       { name: "VS Code", iconClass: "devicon-vscode-plain", level: "Advanced", levelPercentage: 90, description: "Primary IDE for all development. Proficient with extensions for formatting and debugging.", projects: ["All projects"] },
