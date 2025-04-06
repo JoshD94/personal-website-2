@@ -31,7 +31,7 @@ const Header = () => {
     { name: "Contact", href: "#contact", isExternal: false },
     {
       name: "Resume",
-      href: "https://drive.google.com/file/d/1kmCDxLorwSFpaZdFwrv-PmkSRMAXD9MU/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1rURpeqlz-s0BHR177Ffj5PwhDxAmUh1W/view?usp=sharing",
       isExternal: true,
     },
   ];

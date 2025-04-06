@@ -436,8 +436,8 @@ export default function Home() {
                 LinkedIn
               </a>
             </Tooltip>
-            <Tooltip text="Download Resume">
-              <a href="https://drive.google.com/file/d/1kmCDxLorwSFpaZdFwrv-PmkSRMAXD9MU/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+            <Tooltip text="View Resume">
+              <a href="https://drive.google.com/file/d/1rURpeqlz-s0BHR177Ffj5PwhDxAmUh1W/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
                 Resume
               </a>
             </Tooltip>
