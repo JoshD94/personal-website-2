@@ -2,7 +2,21 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, set up your environment variables:
+
+1. Copy the example environment file:
+```bash
+cp .env.example .env.local
+```
+
+2. Modify the values in `.env.local` if needed:
+```
+NEXT_PUBLIC_GITHUB_URL=your_github_url
+NEXT_PUBLIC_LINKEDIN_URL=your_linkedin_url
+NEXT_PUBLIC_RESUME_URL=your_resume_url
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev

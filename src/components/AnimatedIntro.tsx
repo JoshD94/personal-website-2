@@ -2,6 +2,7 @@ import React from "react";
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
 import Image from "next/image";
 import Tooltip from "./Tooltip";
+import { GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "../utils/constants";
 
 const AnimatedIntro = () => {
   return (
@@ -44,7 +45,7 @@ const AnimatedIntro = () => {
             <div className="flex space-x-4 justify-center md:justify-start mt-8">
               <Tooltip text="GitHub Profile">
                 <a
-                  href="https://github.com/JoshD94"
+                  href={GITHUB_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
@@ -54,7 +55,7 @@ const AnimatedIntro = () => {
               </Tooltip>
               <Tooltip text="LinkedIn Profile">
               <a
-                  href="https://www.linkedin.com/in/joshua-dirga-49a929215/"
+                  href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
@@ -73,7 +74,7 @@ const AnimatedIntro = () => {
               </Tooltip>
               <Tooltip text="View Resume">
               <a
-                  href="https://drive.google.com/file/d/1rURpeqlz-s0BHR177Ffj5PwhDxAmUh1W/view?usp=sharing"
+                  href={RESUME_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-900 transition-colors"

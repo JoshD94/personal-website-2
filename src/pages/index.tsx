@@ -8,6 +8,7 @@ import ProjectCard from "../components/ProjectCard";
 import ExperienceCard from "../components/ExperienceCard";
 import HobbyCarousel from "../components/HobbyCarousel";
 import Tooltip from "../components/Tooltip";
+import { GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "../utils/constants";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -427,17 +428,17 @@ export default function Home() {
           <p className="text-foreground">+1 (607) 2629541 | joshdirga@gmail.com | Ithaca, NY, 14853</p>
           <div className="flex justify-center mt-3 space-x-4">
             <Tooltip text="GitHub Profile">
-              <a href="https://github.com/JoshD94" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
                 GitHub
               </a>
             </Tooltip>
             <Tooltip text="LinkedIn Profile">
-              <a href="https://www.linkedin.com/in/joshua-dirga-49a929215/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
                 LinkedIn
               </a>
             </Tooltip>
             <Tooltip text="View Resume">
-              <a href="https://drive.google.com/file/d/1rURpeqlz-s0BHR177Ffj5PwhDxAmUh1W/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
                 Resume
               </a>
             </Tooltip>

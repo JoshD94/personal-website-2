@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
+import { RESUME_URL } from "../utils/constants";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ const Header = () => {
     { name: "Contact", href: "#contact", isExternal: false },
     {
       name: "Resume",
-      href: "https://drive.google.com/file/d/1rURpeqlz-s0BHR177Ffj5PwhDxAmUh1W/view?usp=sharing",
+      href: RESUME_URL,
       isExternal: true,
     },
   ];
