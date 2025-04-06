@@ -165,7 +165,7 @@ const projects: ProjectData[] = [
   },
   {
     title: "Triviargh",
-    description: "A quiz app. Users can create and play quizzes, and compete with friends. Built with React, Next.js, and PostgreSQL.",
+    description: "A quiz app. Users can create and play quizzes, and compete with friends. Features AI-generated quizzes.",
     techStack: [
       { name: "React", iconClass: "devicon-react-plain" },
       { name: "TypeScript", iconClass: "devicon-typescript-plain" },
