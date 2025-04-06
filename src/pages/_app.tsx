@@ -7,13 +7,13 @@ import { Analytics } from "@vercel/analytics/react";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
-      <Analytics />
       <Head>
         <title>Joshua Dirga</title>
         <link rel="icon" href="/images/joshua-headshot-round.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Component {...pageProps} />
+      <Analytics />
     </ThemeProvider>
   );
 }
