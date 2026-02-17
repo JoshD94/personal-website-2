@@ -32,7 +32,7 @@ const AnimatedIntro = () => {
                 <span className="animate-gradient-1 bg-gradient-to-r from-cyan-500 via-blue-800 to-cyan-500 bg-clip-text text-transparent bg-300% transition-all duration-400">
                   healthcare apps
                 </span>{" "}
-                — Crafting technology with purpose at Cornell and beyond.
+                - Crafting technology with purpose at Cornell and beyond.
               </p>
               <p className="text-lg sm:text-xl mt-2">
                 Indonesian-born developer who brings a{" "}
